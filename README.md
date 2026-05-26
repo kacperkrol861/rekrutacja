@@ -38,3 +38,27 @@ Returns a list of non-fork repositories with their branches.
       ]
     }
   ]
+
+    Error Response (404 Not Found):
+    JSON
+
+    {
+      "status": 404,
+      "message": "GitHub user 'nonexistentuser' not found"
+    }
+
+How to Run
+Running the Application
+
+To start the application server locally, execute the following command in the terminal from the root directory:
+Bash
+
+./gradlew.bat bootRun
+
+The application will be accessible at http://localhost:8080.
+Running Tests
+
+The project contains comprehensive integration tests using WireMock to simulate logical business cases against the backing GitHub API (https://developer.github.com/v3). To execute the test suite, run:
+Bash
+
+./gradlew.bat test
